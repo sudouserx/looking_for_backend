@@ -6,7 +6,7 @@ import {
   addCabin,
   updateCabin,
   reportCabin,
-} from "../controllers/cabins";
+} from "../controllers/cabins.js";
 
 const cabinRoutes = express.Router();
 

@@ -6,7 +6,8 @@ import {
   addLab,
   updateLab,
   reportLab,
-} from "../controllers/labs";
+  findLabByNameUsingRegex,
+} from "../controllers/labs.js";
 
 const labRoutes = express.Router();
 
@@ -14,6 +15,7 @@ const labRoutes = express.Router();
 labRoutes.get("/", getLabs);
 labRoutes.get("/:id", getLab);
 labRoutes.get("/reported", getReportedLabs);
+labRoutes.get("/name/:labName", findLabByNameUsingRegex);
 
 /** POST */
 labRoutes.post("/", addLab);

@@ -5,8 +5,8 @@ import cors from "cors";
 import dotenv from "dotenv";
 import morgan from "morgan";
 import helmet from "helmet";
-import cabinRoutes from "./routes/cabins";
-import labRoutes from "./routes/labs";
+import cabinRoutes from "./routes/cabins.js";
+import labRoutes from "./routes/labs.js";
 
 dotenv.config();
 const app = express();

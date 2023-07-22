@@ -1,4 +1,4 @@
-import Cabin from "../models/cabins";
+import Cabin from "../models/cabins.js";
 
 /** CREATE */
 export const addCabin = async (req, res) => {
