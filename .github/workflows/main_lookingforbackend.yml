@@ -1,3 +1,6 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
 name: Build and deploy Node.js app to Azure Web App - LookingForBackend
 
 on:
@@ -16,7 +19,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v1
         with:
-          node-version: '18.x'
+          node-version: '16.x'
 
       - name: npm install, build, and test
         run: |
@@ -43,23 +46,11 @@ jobs:
         with:
           name: node-app
 
-      - name: Set up Node.js version
-        uses: actions/setup-node@v1
-        with:
-          node-version: '18.x'
-
-      - name: Install app dependencies
-        run: npm ci
-
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'LookingForBackend'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B1B8354018094833AA6FDED492C87FF7 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1D6334BD4E0446F8A4605E712B7A1524 }}
           package: .
-
-      - name: Set environment variables on Azure Web App
-        run: |
-          az webapp config appsettings set --name 'LookingForBackend' --resource-group 'LookingForBackend_group' --settings MONGO_URL="${{ secrets.MONGO_URL }}"
