@@ -20,8 +20,8 @@ app.use(cors());
 
 /** ROUTES */
 // app.use("/auth", authRoutes);
-app.use("/labs", labRoutes);
-app.use("/cabins", cabinRoutes);
+app.use("/api/v1/labs", labRoutes);
+app.use("/api/v1/cabins", cabinRoutes);
 
 /** MONGOOSE SETUP */
 const PORT = process.env.PORT || 5000;
