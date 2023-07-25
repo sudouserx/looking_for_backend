@@ -20,7 +20,7 @@ app.use(cors());
 
 /** ROUTES */
 // app.use("/auth", authRoutes);
-app.use("/", (req, res) => res.send("Hello World!"));
+//app.use("/", (req, res) => res.send("Hello World!"));
 app.use("/api/v1/labs", labRoutes);
 app.use("/api/v1/cabins", cabinRoutes);
 
