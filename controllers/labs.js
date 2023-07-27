@@ -1,7 +1,7 @@
 import Lab from "../models/labs.js";
 
 const fetchAllLabs = async () => {
-  return await Lab.find();
+  return await Lab.find({isReported: false}).sort({ createdAt: -1 });
 };
 
 /** CREATE */

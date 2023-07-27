@@ -1,7 +1,7 @@
 import Cabin from "../models/cabins.js";
 
 const fetchAllCabins = async () => {
-  return await Cabin.find();
+  return await Cabin.find({isReported: false}).sort({ createdAt: -1 });
 };
 
 /** CREATE */
