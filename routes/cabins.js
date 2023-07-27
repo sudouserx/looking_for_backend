@@ -6,6 +6,7 @@ import {
   addCabin,
   updateCabin,
   reportCabin,
+  findCabinByStaffNameUsingRegex
 } from "../controllers/cabins.js";
 
 const cabinRoutes = express.Router();
@@ -14,6 +15,7 @@ const cabinRoutes = express.Router();
 cabinRoutes.get("/", getCabins);
 cabinRoutes.get("/:id", getCabin);
 cabinRoutes.get("/reported", getReportedCabins);
+cabinRoutes.get("/staff/:name", findCabinByStaffNameUsingRegex);
 
 /** POST */
 cabinRoutes.post("/", addCabin);
