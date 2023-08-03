@@ -6,7 +6,7 @@ const LabSchema = new mongoose.Schema(
     buildingName: { type: String, required: true },
     buildingNumber: { type: Number },
     floorNumber: { type: Number, default: 0 },
-    roomNumber: { type: Number, required: true },
+    roomNumber: { type: String, required: true },
     landmark: { type: String, default: "None" },
     department: { type: String, default: "None" },
     isReported: { type: Boolean, default: false },
